@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="WLImageSavePreviewDialog">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BWQ-iR-ggP">
+                    <rect key="frame" x="16" y="16" width="248" height="238"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKM-Sp-dzq">
+                    <rect key="frame" x="200" y="262" width="64" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                    <state key="normal" title="忽略"/>
+                    <connections>
+                        <action selector="ignoreButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="qCM-N2-utA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Wz-hL-ivr">
+                    <rect key="frame" x="16" y="262" width="64" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="d2A-4N-63S"/>
+                        <constraint firstAttribute="height" constant="30" id="v6y-F4-7s0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                    <state key="normal" title="保存"/>
+                    <connections>
+                        <action selector="saveButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="WBh-6S-GLC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="UKM-Sp-dzq" firstAttribute="bottom" secondItem="9Wz-hL-ivr" secondAttribute="bottom" id="0nf-Ax-4cc"/>
+                <constraint firstItem="BWQ-iR-ggP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="1uR-Ev-4FO"/>
+                <constraint firstAttribute="trailing" secondItem="BWQ-iR-ggP" secondAttribute="trailing" constant="16" id="6xw-Oq-oTG"/>
+                <constraint firstItem="UKM-Sp-dzq" firstAttribute="width" secondItem="9Wz-hL-ivr" secondAttribute="width" id="7h9-sF-w1b"/>
+                <constraint firstItem="9Wz-hL-ivr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="Fzi-cW-es3"/>
+                <constraint firstAttribute="trailing" secondItem="UKM-Sp-dzq" secondAttribute="trailing" constant="16" id="JoX-e4-utw"/>
+                <constraint firstItem="BWQ-iR-ggP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="Pr9-a3-XmC"/>
+                <constraint firstItem="UKM-Sp-dzq" firstAttribute="top" secondItem="BWQ-iR-ggP" secondAttribute="bottom" constant="8" id="aqJ-pH-uFK"/>
+                <constraint firstItem="UKM-Sp-dzq" firstAttribute="height" secondItem="9Wz-hL-ivr" secondAttribute="height" id="axo-cP-fLY"/>
+                <constraint firstItem="9Wz-hL-ivr" firstAttribute="top" secondItem="BWQ-iR-ggP" secondAttribute="bottom" constant="8" id="c4n-DE-YXl"/>
+                <constraint firstItem="UKM-Sp-dzq" firstAttribute="top" secondItem="9Wz-hL-ivr" secondAttribute="top" id="hyS-kA-os0"/>
+                <constraint firstAttribute="bottom" secondItem="9Wz-hL-ivr" secondAttribute="bottom" constant="8" id="odO-iG-L7I"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="16"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="imageView" destination="BWQ-iR-ggP" id="i3t-NJ-m66"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="36"/>
+        </view>
+    </objects>
+</document>
